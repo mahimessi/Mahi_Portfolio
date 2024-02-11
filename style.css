@@ -1,0 +1,630 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background: #080808;
+    color: #fff; /* text color */
+}
+
+#header
+{
+    /* In the header tag we are adding the background image */
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/profile.jpeg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: right;
+}
+.container
+{
+    padding: 10px 5%; /* 10 px from top and bottom 10% from left and right*/
+}
+
+nav{
+    display: flex; /* Image and links will be side by side*/
+    align-items:  center;
+    justify-content: space-between; /* Items will  have space between them */
+    flex-wrap: wrap; /* Specifies that the flexible items will wrap if necessary */
+
+}
+
+.logo
+{
+    width: 200px;
+}
+nav ul li{
+    display: inline-block; /* horizontally inline */
+    list-style: none;
+    margin: 10px 20px; /*get some space between all the lines 10 px from top and bottom and 20 px from left and right */
+
+}
+
+nav ul li a{
+    color:  #fff;
+    text-decoration: none; /* removes underline*/
+    font-size: 18px;
+    position: relative; /*relative positioning moves an element relative to its default position on the page,*/
+}
+
+nav ul li a::after
+{
+    /* adding the hover effect on links of Home, about, Portifolio, Contact */
+    content: ''; /* if we add the content anything it would display under the links*/
+    width: 0; /* if we add width before the hover the line will be added under the link*/
+    height: 3px; /* the height of the line */
+    background: #ff004f; /* adding the color of red hover */
+    position: absolute; /*absolute positioning moves an element relative to its nearest positioned ancesto*/
+    left: 0;/* The under line will not present left of the element */
+    bottom: -5px; /* the underline will present -5px below the element */
+    transition: 0.5s; /* the hover transition will be after 0.5 sec */
+
+}
+
+nav ul li a:hover::after
+{
+  width: 100%; /* The under line will be completely fill till the edge of the element */
+}
+
+.header-text
+{
+    margin-top: 20px; /* Adding space from the top */
+    font-size: 20px; /* Changing the font size */
+
+}
+.header-text p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.header-text h1{
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.header-text h1 span{
+    color: #eb0832;
+}
+
+#about
+{
+    padding: 80px 0; /* 80px from top and bottom 0 from left and right */
+    color: #ababab;
+}
+.row
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+ .about-col-1
+ {
+    /* Now we are going to decide width for col 1 and col 2*/
+    flex-basis: 35%;
+ }
+
+ .about-col-1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+ }
+ .about-col-2
+ {
+    flex-basis: 60%;
+    /* we can clearly observe that in 1st col we mentioned 35% width but now we mentioned 60% width 
+    here 5% space between both the columns */
+
+ }
+
+ .sub-title
+ {
+    /* Changing the color text of the About section */
+    font-size: 30px;
+    font-weight: 200;
+    color: #ffff;
+ }
+
+.tab-titles
+{
+    display: flex;
+    margin: 20px 0 40px; /* 20px from top 0 from left and right 40px from the bottom */
+}
+
+.tab-links
+{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tab-links::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f; /* adding the color of red hover */
+    position: absolute; /*absolute positioning moves an element relative to its nearest positioned ancesto*/
+    left: 0;/* The under line will not present left of the element */
+    bottom: -5px; /* the underline will present -5px below the element */
+    transition: 0.5s; 
+
+}
+
+.tab-links.active-link:hover:after
+{
+    width: 100%;
+}
+
+table
+{
+    margin: 10px;
+    border-style: solid;
+    border-color: #760909;
+}
+
+table h2{
+    padding: 10px;
+}
+table tr td{
+        background-color: rgb(51, 204, 189);
+        color: #a12a2a;
+        text-align: center;
+}
+
+.experience-content .tab-contents ul li{
+
+    list-style: disc;
+    padding-top: 10px;
+    margin: 10px;
+    font-size: 17px;
+}
+
+.experience-content .tab-contents ul li span
+{
+    color: #26cab7;
+    font-size: 20px;
+}
+
+.education-content .tab-contents ul li{
+
+    list-style: disc;
+    margin-inline-start: 0px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.education-content .tab-contents ul li span{
+
+    color: #26cab7;
+    font-size: 30px;
+}
+
+.tab-contents
+{
+    display: none;
+}
+
+.tab-contents.active-tab
+{
+    display: block;
+}
+
+#summary
+{
+    margin-left: 50px;
+    padding: 50px ;
+}
+
+.summary-content ul li{
+
+    padding-top: 20px;
+    list-style: disc;
+    line-height: 1.5;
+}
+
+#projects
+{   
+    margin: auto;
+    padding: 50px 0;
+    justify-content: start;
+}
+
+.projects-list
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+    justify-content: start;
+    z-index: 2;
+}
+
+.project
+{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 400px;
+}
+
+.project img{
+
+    width: 130%;
+    height: 130%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    overflow-y: auto;
+    /* object-fit: cover; */
+}
+
+.layer
+{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #808080);
+    border-radius: 10px;
+    /* padding-top: 0.5%; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0, 30px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.5s;
+
+} 
+
+.layer h2{
+    color: lightblue;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+.layer a{
+
+    margin-left: 43%;
+    color: #00c3ff;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.project:hover img
+{
+    transform: scale(1.1);
+}
+
+.project:hover .layer
+{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.btn
+{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+
+}
+
+.btn:hover{
+    background: #ff004f;
+}
+
+
+.contact-left
+{
+    flex-basis: 35%;
+}
+
+.contact-right
+{
+    flex-basis: 60%;
+}
+
+.contact-left p i{
+
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-left
+{
+    flex-basis: 35%;
+}
+
+.contact-right
+{
+    flex-basis: 60%;
+}
+
+.contact-left p i{
+
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons
+{
+    margin-top: 30px;
+}
+
+.social-icons a{
+
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transform: transform 0.5s;
+}
+
+.social-icons a:hover
+{
+    color: #e25431;
+    transform: translateY(-5px);
+}
+
+.btn.btn2
+{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form
+{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright
+{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+
+.copyright i{
+    color: #ff004f;
+}
+
+/* ------CSS for small screens ------*/
+
+nav .fas
+{
+    display: none;
+}
+
+
+@media only screen and (max-width : 600px)
+{
+    #header
+    {
+        margin: auto;
+        margin-right: 50%;
+        padding-top :10%;
+        background-image: url(images/Phone-background.jpeg);
+    }
+    .header-text
+    {
+        padding-top : 10%;
+        padding-left: 10%;
+        font-size: 20px;
+    }
+    .header-text h1 
+    {
+        font-size: 20px;
+    }
+
+
+    nav .fas
+    {
+        display: none;
+    }
+    
+    
+    @media only screen and (max-width : 600px)
+    {
+        #header
+        {
+            height: 100%;
+            width: 130%;
+            margin: auto;
+            justify-content: center;
+            background-image: url(images/Phone-background.jpeg);
+        }
+        .header-text
+        {
+            font-size: 15px;
+            margin: auto;
+            justify-content: center;
+        }
+        .header-text h1 
+        {
+            justify-self: start;
+            font-size: 30px;
+        }
+    
+        nav .fas
+        {
+            display: block;
+            font-size: 25px;
+        }
+    
+        nav ul 
+        {
+            background: #ff004f;
+            position: fixed;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            height: 100vh;
+            padding-top: 50px;
+            z-index: 2;
+            transition: right 0.5s;
+        }
+    
+        nav ul li 
+        {
+            display: block;
+            margin: 25px;
+        }
+    
+        nav ul .fas{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            cursor: pointer;    
+        }
+    
+        .sub-title
+        {
+            justify-content: center;
+            font-size: 40px;
+        }
+    
+        .about-col-1, .about-col-2
+        {
+            justify-content: center;
+            flex-basis: 100%;
+        }
+    
+        .about-col-1
+        {
+            justify-content: center;
+
+            margin-bottom: 30px;
+        }
+    
+        .about-col-2
+        {
+            font-size: 14px;
+        }
+    
+        .projects-list
+        {
+            margin-right: 100%;
+        }
+        
+        .project {
+    
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+          }
+    
+        .project img::before{
+    
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transition: all 0.8s;
+            opacity: 0;
+            background-size: 100% 100%;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow-y: auto;
+            scroll-snap-align: start;
+            overscroll-behavior-y: contain;
+            scroll-snap-type: y mandatory;
+            scroll-snap-type: x mandatory ;
+            overscroll-behavior-x: contain;
+            scrollbar-width: none;
+        }
+    
+        .project img:hover:before {
+            opacity: 0.8;
+          }
+    
+    
+        .tab-links
+        {
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 20px;
+        }
+    
+        .contact-left, .contact-right
+        {
+            flex-basis: 100%;
+        }
+        .copyright
+        {
+            font-size: 14px;
+        }
+    }
+    
+}
+    #msg
+    {
+        color: #61b752;
+        margin-top: -40px;
+        display: block;
+
+    }

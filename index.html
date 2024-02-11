@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IF-edge">
+        <meta name="viewport" content="widt-device-width, initial-scale=1.0">
+        <title> My Portifolio </title>
+        <!-- linking css to this html -->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/99a28c3429.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+<div id="header">
+    <!-- Adding the Navigation bar like logo and the menu-->
+    <div class="container"> 
+        <!-- The reason for using div tag is mainly to make divisions of content in the web page like 
+        text, images, header, footer, naavigation bar ,.. 
+        It is mainly used for block - lvel organization and styling of page elements
+        // But the span tag is used for inline organization and styling -->
+        <nav>
+            <img src="images/logo.jpeg" class="logo">
+            <ul id="side-menu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#projects">Portifolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p> Java Full Stack Developer </p>
+            <h1> Hi, I'm <span>Sai Mahendra</span> <br>Currently Working at First Republic Bank </h1> 
+        </div>
+     </div>
+</div>
+
+<div id="about">
+    <div class="container"> 
+        <!-- We are going to create 2 columns -->
+        <div class="row">
+            <div class="about-col-1"> <!-- 1st column -->
+                <img src="images/About.png">
+            </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">  About Me</h1>
+            <br>
+            <p> I'm Sai Mahendra, a seasoned Java Full Stack Developer 
+                with over nine years of experience in building robust 
+                enterprise applications. My expertise lies in Java and J2EE technologies,
+                with a focus on delivering scalable solutions using Agile methodologies. 
+                I'm passionate about leveraging the latest tools and frameworks
+                 to streamline development processes and enhance user experiences.
+                  Let's connect and explore how we can innovate together!
+            </p>
+        
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
+            <p class="tab-links" onclick="opentab('experience')"> Experience </p>
+            <p class="tab-links" onclick="opentab('education')"> Education </p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+        <table class="skills-content-table skills-content-striped skills-content-bordered skills-content-table-all">
+            <h2> Technical Skills </h2>
+            <br>
+            <tr>
+                <td> Languages    </td>
+                <td> Java 17,11,8.0, J2EE, PL/SQL, SQL, Python</td>
+            </tr>
+            <tr>
+                <td> Server Programming   </td>
+                <td> J2EE, Servlets, JSP, Struts, JMS,
+                     JDBC, Spring, Hibernate, Spring Boot,
+                      SOAP Web Services, RESTful web services, 
+                      Spring MVC, AWS, Azure 
+                </td>
+            </tr>
+            <tr>
+                <td> Frontend Frameworks/libraries    </td>
+                <td> Angular, HTML, CSS, TypeScript, JavaScript,
+                     jQuery, Bootstrap, React, AJAX, Node.js 
+                </td>
+            </tr>
+            <tr>
+                <td> Application Servers  </td>
+                <td> WebLogic, WebSphere, JBoss </td>
+            </tr>
+            <tr>
+                <td> Web Servers  </td>
+                <td> Apache Tomcat, Web Sphere, Apache, 
+                    JBoss EAP, Web Logic Server, and Apache Camel </td>
+            </tr>
+            <tr>
+                <td> Database Systems  </td>
+                <td> Oracle 7.x/8i/9i/10g, My SQL, SQL Server 2008/2012, PostgreSQL,
+                     Cassandra, DB2, Mongo DB, OO Modeling UML, Rational Rose, Neo4j
+                </td>
+            </tr>
+            <tr>
+                <td> Cloud Technologies   </td>
+                <td> AWS, EC2, S3, Lambda, ECS, Azure
+                </td>
+            </tr>
+            <tr>
+                <td> XML Technologies     </td>
+                <td> XML, DOM, SAX, XSL, XSLT, JNDI, SOAP </td>
+            </tr>
+            <tr>
+                <td> Version Control systems     </td>
+                <td> CVS, Rational Clear Case, SVN, GitHub </td>
+            </tr>
+            <tr>
+                <td> Tools  </td>
+                <td> JUnit, Log4j, SQL*PLUS, TOAD, ANT, Maven </td>
+            </tr>
+        </table>
+        </div>
+        <br>
+        <div class="experience-content">
+        <div class="tab-contents" id="experience">
+            <h2> Work Experience </h2>
+            <ul>
+                <li><span> April 2021 -   Present </span><br> Full Stack Java Developer - First Republic Bank, New York, NY </li>
+                <li><span> August 2017 -  March 2021</span><br> Full Stack Java Developer - Mercedes Benz Financial Services -Farmington Hills, Michigan</li>
+                <li><span> October 2016 - July 2017 </span><br> Full Stack Java Developer - American Airlines - Fort Worth, TX </li>
+                <li><span> February 2015 - August 2016 </span><br> Java/J2EE Developer - Brio Technologies Private Limited - Hyderabad, India      </li>
+                <li><span> June 2014- January 2015 </span><br> Jr. Java Developer - Avon Technologies Pvt Ltd - Hyderabad, India</li>
+
+            </ul>
+        </div>
+        </div>
+        <br>
+        <div class="education-content">
+        <div class="tab-contents" id="education">
+            <h2> Highest Degree </h2>
+            <ul>
+                <li><span>JNTUH - 2014 Graduated</span><br> Bacehlor's in Computer Science </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div id="summary">
+        <h1 class="summary-title"> Professional Summary </h1>
+        <div class="summary-content">
+            <ul>
+                <li>Over nine years of Java development experience, specializing in multi-tier distributed Enterprise applications using Java and J2EE technologies.</li>
+                <li>Proficient in Agile methodologies, including Sprint, Scrum, Waterfall, and Test-Driven Development (TDD).</li>
+                <li>Expertise in Java 17, 11, and 1.8 features, utilizing multithreading and collections for efficient development.</li>
+                <li>Skilled in J2EE frameworks such as Spring Boot, Spring MVC, Struts, and Servlets.</li>
+                <li>Implemented Node.js alongside Java for versatile and responsive architecture.</li>
+                <li>Knowledgeable in microservices, employing industry-standard design patterns and use case diagrams.</li>
+                <li>Proficient in RESTful and SOAP web services, ORM frameworks (JPA, Hibernate, Spring JDBC), and Spring Cloud.</li>
+                <li>Implemented security measures such as OAuth2, SSL, and JWT.</li>
+                <li>Adept at using diverse front-end technologies and working with SQL and NoSQL databases.</li>
+                <li>Successfully implemented Jenkins CI/CD for automation, ensuring comprehensive testing coverage.</li>
+                <li>Utilized cloud technologies like AWS and Azure for scalable infrastructure.</li>
+                <li>Focused on data protection and efficient communication through message queues.</li>
+                <li>Demonstrated a versatile skill set and extensive experience in enterprise application development.</li>
+                <li>Committed to seamless automation and deployment, emphasizing scalability.</li>
+                <li>Capable of delivering sophisticated and scalable solutions in the dynamic landscape of enterprise application development.</li>
+                
+            </ul>
+        </div>
+</div>
+
+<!-- Portifolio -->
+
+<div id="projects">
+    <div class="container" >
+        <h1 class="works-title"> My projects </h1>
+        <div class="projects-list" >
+                <div class="project">
+                <img src="images/FRB.jpeg">
+                    <div class="layer">
+                        <h2> First Reublic Bank </h2>
+                        <br>
+                        <ul>
+                            <li>    Led the creation of the Customer Data Repository (CDR) using Java 17 and Spring Boot, aligning development goals with business requirements, and reducing external data requests by 30%. </li>
+                            <li>    Managed the S&P File Processing module, organizing daily files, and maintaining data integrity, resulting in a 25% increase in operational efficiency. </li>
+                            <li>    Designed and implemented the CDR Command Centre, utilizing Node.js for specific tasks, streamlining developer tasks, and supporting teams with a 20% improvement in task completion time. </li>
+                            <li>    Developed a Bank Statement module API with Java and incorporated Node.js for OCR technology, simplifying storage and retrieval processes and reducing manual effort by 35%. </li>
+                            <li>    Enhanced user interfaces with Angular 14, improving the user experience and interaction with developed modules, resulting in a 25% increase in user satisfaction. </li>
+                            <li>    Utilized a comprehensive technology stack including Java, Spring, Angular 14, TypeScript, Node.js, Spring Cloud, Apache Kafka, Splunk, Elastic Search, SQL, PostgreSQL, Docker, and Spring Security. </li>
+                            <li>    Applied AWS (EC2) for cloud infrastructure, contributing to a 20% improvement in scalability and reliability in handling customer data. </li>
+                            <li>    Leveraged CI/CD practices, scripting efficient deployment processes with Docker files and incorporating Node.js where needed, resulting in a 30% reduction in deployment time. </li>
+                            <li>    Integrated technologies like Oracle, OpenShift, Bootstrap, JavaScript, Kubernetes, Hibernate, Maven, JIRA, JMeter, JUnit, ANT, and WebLogic, ensuring a comprehensive and efficient development environment. </li>
+                            <li>    Played a key role in achieving seamless communication using Apache Kafka, enhancing real-time data processing by 40%. </li>
+                            <li>    Utilized Splunk and Elastic Search for log management and system monitoring, reducing issue resolution time by 25%. </li>
+                            <li>    Integrated security measures with Spring Security and Node.js, ensuring data protection and compliance, leading to a 15% improvement in system security. </li>
+                            <li>    Demonstrated proficiency in performance testing using JMeter, ensuring scalability and reliability, resulting in a 20% improvement in system performance. </li>
+                            <li>    Collaborated within an Agile environment, contributing to sprint planning, daily stand-ups, and retrospectives, fostering a 30% increase in team collaboration and project success.  </li>
+
+                        <br>
+                        </ul>
+                        <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+        <div class="project">
+        <img src="images/MB.jpeg">
+        <div class="layer">
+            <h2> Mercedes-Benz Financial Services </h2>
+            <br>
+            <ul>
+                <li>    Designed and implemented secure APIs using Java 11 and Spring Boot, facilitating seamless communication between Mercedes-Benz Financial Services' systems and Dealership management systems.</li>
+                <li>    Defined and implemented a standardized data model using the Hibernate Framework, ensuring consistency and efficient mapping of data fields between systems.</li>
+                <li>    Implemented real-time data synchronization mechanisms with Azure services, ensuring immediate updates on vehicle inventory, financing options, and customer data, resulting in a 20% reduction in data latency.</li>
+                <li>    Utilized an event-driven architecture with JMS for real-time reaction to specific events, enhancing responsiveness during customer-initiated financing applications and triggering immediate data exchange between systems.</li>
+                <li>    Implemented robust security measures, including encryption and secure authentication, ensuring compliance with industry regulations and standards, and achieving a 99.9% data security rating.</li>
+                <li>    Integrated Node.js to enable WebSocket communication, fostering bidirectional, real-time data exchange between React-based frontend and backend systems.</li>
+                <li>    Leveraged Node.js's asynchronous nature for streamlined event handling, improving system responsiveness during data synchronization and updates by 30%.</li>
+                <li>    Developed a comprehensive error handling system using Log4j, enabling effective troubleshooting and continuous improvement during data transfer.</li>
+                <li>    Implemented secure user authentication and authorization mechanisms using Spring Security, ensuring controlled access and modification of relevant data.</li>
+                <li>    Set up monitoring tools with Azure services, tracking integration performance and health. Established reporting mechanisms for insights into data transfer patterns, identifying and mitigating potential bottlenecks.</li>
+                <li>    Designed the integration with scalability in mind, leveraging Microservices architecture, Elastic Load Balancing, and Docker, accommodating future growth and optimizing performance by 40%.</li>
+                <li>    Provided comprehensive documentation using Jira, outlining integration processes and workflows. Conducted training sessions ensuring effective utilization. Implemented a robust testing strategy using Junit and Mockito, resulting in a 95% reduction in post-deployment issues.</li>
+               
+            <br>     
+            </ul>
+            <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+        </div>
+        </div>
+
+        <div class="project">
+        <img src="images/AA.jpeg">
+        <div class="layer">
+            <h2> American Airlines </h2>
+            <br>
+            <ul>
+                <li>    Designed and implemented a centralized Crew Scheduling System using Spring MVC, Spring Boot, and Angular, ensuring compliance with aviation regulations, labor laws, and union agreements.</li>
+                <li>    Integrated real-time database connectivity with Java, EJB, SOAP, and JMS, automating alerts and notifications for compliance features.</li>
+                <li>    Created a Crew Preferences and Bidding System with Angular, TypeScript, and Spring Boot, enabling crew members to optimize schedules based on operational needs.</li>
+                <li>    Developed algorithms in Java for automated schedule optimization, integrating machine learning models for continuous improvement based on historical data, resulting in a 20% efficiency gain.</li>
+                <li>    Built Angular Native mobile applications for crew access to schedules, real-time updates, and request submissions, ensuring seamless communication with JMS features.</li>
+                <li>    Integrated Crew Management systems with HR platforms using SOAP and WSDL, ensuring up-to-date crew qualifications, certifications, and automated training alerts.</li>
+                <li>    Developed communication tools with Angular and WebSocket, fostering collaboration among crew members and integrating with existing systems for a unified platform.</li>
+                <li>    Implemented predictive analytics for anticipating crew shortages in Java, integrated with AWS for scalability, and developed features for proactive scheduling adjustments.</li>
+                <li>    Created a reporting and analytics dashboard using Angular, providing management with key metrics related to crew scheduling, utilizing Java, JDBC for data retrieval, and Oracle for database management.</li>
+                <li>    Implemented robust security measures using Java, Spring Security, and AWS, ensuring compliance with data protection regulations. Established an audit trail using Log4J to track changes to crew schedules, ensuring accountability. Conducted regular security audits and updates.</li>
+
+                <br>
+            </ul>
+            <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+        </div>
+        </div>
+
+        <div class="project">
+        <img src="images/BRIO.jpeg">
+        <div class="layer">
+            <h2> Brio Technologies </h2>
+            <br>
+            <ul>
+                <li>    Designed and implemented a secure Electronic Health Record (EHR) system using HTML, CSS, JavaScript, and Angular JS, ensuring efficient storage and management of patient health information.</li>
+                <li>    Developed patient registration features with jQuery and Spring MVC, allowing healthcare providers to efficiently create and manage patient profiles with essential information.</li>
+                <li>    Implemented an appointment scheduling module with Spring Web Flow, enabling online booking for patients and effective schedule management for healthcare providers.</li>
+                <li>    Integrated telemedicine features using Angular JS and RESTful web services, facilitating virtual consultations and remote monitoring. Implemented a Clinical Decision Support System (CDSS) to provide relevant medical knowledge for informed decision-making.</li>
+                <li>    Developed a prescription management system with Angular JS, Spring MVC, and MySQL. Integrated billing features with Azure services, supporting healthcare billing processes. Ensured robust security measures using Spring Security, ensuring compliance with healthcare regulations like HIPAA. Conducted regular security audits for continuous improvement.</li>
+                    
+            <br>
+            </ul>
+            <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+        </div>
+        </div>
+
+        <div class="project">
+        <img src="images/AVON.jpeg">
+        <div class="layer">
+            <h2> Avon Technologies </h2>
+            <br>
+            <ul>
+                <li>    Spearheaded the development of a robust Human Resource Management System (HRMS) using HTML, CSS, JavaScript, jQuery, JSP, Spring MVC, and Spring Web Flow, ensuring a comprehensive and user-friendly solution.</li>
+                <li>    Managed the MySQL database for optimal data storage and retrieval, supporting critical HR functions such as employee information, attendance tracking, and payroll management. Successfully integrated the HRMS with external systems, including finance and accounting, using RESTful web services.</li>
+                <li>    Utilized Eclipse IDE for streamlined development workflows, ensuring code consistency and reliability. Worked in a Linux environment, optimizing the HRMS for stability and security. Implemented version control using SVN for collaborative development, enhancing team efficiency.</li>
+
+            <br>               
+            </ul>
+            <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+        </div>
+        </div>
+                </div>
+                        <a href="#" class="btn"> See More </a>
+                </div>
+
+        </div>
+    </div>
+</div>
+<!-- Contact Form -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">       
+            <div class="contact-left">
+            <h1 class="sub-title"> Contact Me </h1>
+            <br>
+            <p><i class="fa-solid fa-paper-plane"></i>saimahendrapenumkula@gmail.com</p>
+            <br>
+            <p><i class="fa-solid fa-phone"></i> 334-489-0160</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <a href="images/Updated-JFSD.docx" download class="btn btn2"> Download CV </a>
+        </div>
+
+            <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2" > Submit </button>
+
+            </form>
+            <span id="msg">  </span>
+            </div>
+        </div>
+    </div>
+        <div class="copyright">
+            <p> Copyright &copy; Sai Mahendra Penumakula. Made with <i class="fa-solid fa-heart"></i> HTML, CSS, JavaScript</p>
+        </div>
+</div>
+
+<!-- Adding the Java Script -->
+<script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");  
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+</script>
+
+<script>
+
+        var sidemenu=document.getElementById("side-menu");
+        function openmenu()
+        {
+            sidemenu.style.right = "0";
+        
+        }
+        function closemenu()
+        {
+            sidemenu.style.right = "-200px";
+        }
+
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzCdPYDSobsYEcvIAuAGynu0i8b1PtFSos2fGA-uXzZ9T0CySxXJ6eqC92RYippapZ-/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => 
+        {
+            msg.innerHTML = " Message sent succesfully"
+            setTimeout(function()
+            {
+                msg.innerHTML="";
+            }, 5000) 
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+</head>
+</html>
+
+  
